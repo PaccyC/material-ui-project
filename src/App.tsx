@@ -1,11 +1,13 @@
 
+import { Button } from '@mui/material';
 import './App.css';
-import {MuiTypography} from './components/MuiTypography';
-
+import SettingsIcon from '@mui/icons-material/Settings'
 function App() {
   return (
     <div className="App">
-     <MuiTypography/>
+     <Button startIcon={<SettingsIcon/>}  variant='contained' color='secondary'>Contained</Button>
+     <Button variant='outlined'>Outlined</Button>
+     <Button variant='text'>Text</Button>
     </div>
   );
 }
