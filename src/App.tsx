@@ -5,11 +5,12 @@ import './App.css';
 import Rightbar from './components/Rightbar';
 import Sidebar from './components/Sidebar';
 import Feed from './components/Feed';
+import Navbar from './components/Navbar';
 function App() {
 
-  
-  return (
+    return (
     <Box >
+      <Navbar/>
       <Stack 
         direction="row" 
         spacing={2} 
