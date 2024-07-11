@@ -1,7 +1,8 @@
 import { Notifications, Pets } from "@mui/icons-material"
-import { AppBar, Avatar, Badge, Box, InputBase, Toolbar, Typography, styled } from "@mui/material"
+import { AppBar, Avatar, Badge, Box, InputBase, Menu, MenuItem, Toolbar, Typography, styled } from "@mui/material"
 import MailIcon from '@mui/icons-material/Mail'
 import logo from '../logo.svg'
+import { useState } from "react"
 const StyledToolbar = styled(Toolbar)({
   display: 'flex',
   justifyContent: 'space-between',
@@ -31,6 +32,8 @@ const UserBox =styled(Box)(({theme})=>({
 } 
 }))
 const Navbar = () => {
+
+  const [open,setOpen]=useState(false);
   return (
     <AppBar position="sticky">
       <StyledToolbar>
@@ -57,20 +60,45 @@ const Navbar = () => {
       <Avatar sx={{
         width:30,
         height:30,
+        cursor:"pointer",
         
-      }} src={logo}/>
+      }} src={logo}
+      onClick = {(e)=>setOpen(true)}
+      />
     
       </Icons>
       <UserBox>
           <Avatar sx={{
             width:30,
             height:30,
+            cursor:"pointer",
             
-          }} src={logo}/>
+          }} src={logo}
+          onClick = {(e)=>setOpen(true)}/>
           <Typography variant="subtitle1">John </Typography>
 
       </UserBox>
       </StyledToolbar>
+      <Menu
+        id="demo-positioned-menu"
+        aria-labelledby="demo-positioned-button"
+       
+        open={open}
+        onClose={(e)=>setOpen(false)}
+        
+        anchorOrigin={{
+          vertical: 'top',
+          horizontal: 'right',
+        }}
+        transformOrigin={{
+          vertical: 'top',
+          horizontal: 'right',
+        }}
+      >
+        <MenuItem >Profile</MenuItem>
+        <MenuItem >My account</MenuItem>
+        <MenuItem >Logout</MenuItem>
+      </Menu>
     </AppBar>
   )
 }
