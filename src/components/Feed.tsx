@@ -1,9 +1,15 @@
+import { Box } from "@mui/material"
 
 const Feed = () => {
   return (
-    <div>
-      
-    </div>
+    <Box sx={{
+        backgroundColor:"blue"
+    }}
+     flex={4}
+     p={2}
+    >
+      Feed
+    </Box>
   )
 }
 

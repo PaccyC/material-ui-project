@@ -1,9 +1,19 @@
+import { Box } from "@mui/material"
 
 const Rightbar = () => {
   return (
-    <div>
-      
-    </div>
+    <Box sx={{
+        backgroundColor:"green",
+        display:{
+            xs: 'none',
+            sm: 'block',
+        }
+    }}
+    flex={2}
+    p={2}
+    >
+      Rightbar
+    </Box>
   )
 }
 

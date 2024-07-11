@@ -1,9 +1,22 @@
+import { Box } from "@mui/material"
 
 const Sidebar = () => {
   return (
-    <div>
-      
-    </div>
+    <Box 
+    flex={1}
+    p={2}
+    sx= {
+        {
+            backgroundColor:"yellow",
+            display:{
+                xs: 'none',
+                sm: 'block',
+            }
+        }
+    }
+    >
+      Sidebar
+    </Box>
   )
 }
 
