@@ -1,6 +1,7 @@
 import { AccountBox, Home, ModeNight, Person, Settings, Storefront } from "@mui/icons-material"
 import { Box, List, ListItem, ListItemButton, ListItemIcon, ListItemText, Switch } from "@mui/material"
 
+
 const Sidebar = () => {
   return (
     <Box 
@@ -85,6 +86,7 @@ const Sidebar = () => {
             </ListItemButton>
           </ListItem>
           </List>
+    
       </Box>
 
         
