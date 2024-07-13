@@ -1,8 +1,12 @@
 import { AccountBox, Home, ModeNight, Person, Settings, Storefront } from "@mui/icons-material"
-import { Box, List, ListItem, ListItemButton, ListItemIcon, ListItemText, Switch } from "@mui/material"
+import { Box, List, ListItem, ListItemButton, ListItemIcon, ListItemText, PaletteMode, Switch } from "@mui/material"
+import React from "react";
 
-
-const Sidebar = () => {
+interface SidebarProps{
+  mode: PaletteMode;
+  setMode:(mode:PaletteMode) =>void;
+}
+const Sidebar = ({mode,setMode}:SidebarProps) => {
   return (
     <Box 
 
@@ -82,7 +86,7 @@ const Sidebar = () => {
               <ListItemIcon>
                 <ModeNight />
               </ListItemIcon>
-             <Switch/>
+             <Switch onClick={()=>setMode( mode === "light" ? "dark" :"light")}/>
             </ListItemButton>
           </ListItem>
           </List>
