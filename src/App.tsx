@@ -31,7 +31,7 @@ function App() {
               spacing={2} 
               justifyContent="space-between">
 
-              <Sidebar/>
+              <Sidebar setMode={setMode} mode={mode}/>
               <Feed/>
               <Rightbar/>
             </Stack>
